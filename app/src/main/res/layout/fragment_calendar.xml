@@ -1,0 +1,98 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.hamzah.modulediary.Calendar.CalendarFragment"
+    android:clipToPadding="false">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/llCalendar"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+    
+    <RelativeLayout
+        android:id="@+id/rlBottomSheetCalendar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:behavior_peekHeight="220dp"
+        android:padding="@dimen/activity_horizontal_margin"
+        app:behavior_hideable="true"
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        android:elevation="10dp"
+        android:background="@color/off_white">
+
+        <TextView
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tvMoodBottomSheetCalendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="POSITIVE"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/positiveMoodToolbar"/>
+
+        <View
+            android:id="@+id/viewMoodBottomSheetUnderlineCalendar"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/tvMoodBottomSheetCalendar"
+            android:background="@color/positiveMoodToolbar" />
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/tvBottomSheetCalendar">-->
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/tvTagsTitleBottomSheetCalendar"
+                android:layout_alignParentLeft="true"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tags:"
+                android:layout_alignEnd="@+id/tvCommentTitleBottomSheetCalendar"
+                android:layout_below="@+id/tvMoodBottomSheetCalendar"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/tvTagsBottomSheetCalendar"
+                android:layout_toRightOf="@+id/tvTagsTitleBottomSheetCalendar"
+                android:layout_below="@+id/tvMoodBottomSheetCalendar"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="G53MDP, G53PEC"
+                android:textColor="@android:color/black"/>
+
+        <TextView
+            android:padding="@dimen/activity_horizontal_margin"
+            android:id="@+id/tvCommentTitleBottomSheetCalendar"
+            android:layout_below="@+id/tvTagsBottomSheetCalendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comments:"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:padding="@dimen/activity_horizontal_margin"
+            android:id="@+id/tvCommentBottomSheetCalendar"
+            android:layout_toRightOf="@+id/tvCommentTitleBottomSheetCalendar"
+            android:layout_below="@+id/tvTagsBottomSheetCalendar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Comments:"
+            android:textColor="@android:color/black"/>
+
+        <!--</LinearLayout>-->
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

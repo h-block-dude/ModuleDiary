@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvModuleSetUpCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="G53MDP"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"/>
+        <TextView
+            android:id="@+id/tvModuleSetUpTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mobile Device Programming"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_toRightOf="@+id/tvModuleSetUpCode"
+            android:layout_toLeftOf="@+id/cbModulesSetUp"/>
+
+            <CheckBox
+                android:id="@+id/cbModulesSetUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvModuleSetUpCredits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="Credits: 20"
+            android:layout_alignParentLeft="true"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

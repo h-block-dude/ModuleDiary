@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_calendar"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Calendar" />
+        <item
+            android:id="@+id/nav_statistics"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="My Statistics" />
+        <item
+            android:id="@+id/nav_deadlines"
+            android:icon="@drawable/ic_menu_share"
+            android:title="Deadlines" />
+        <item
+            android:id="@+id/nav_modules"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="My Modules" />
+        <item
+            android:id="@+id/nav_story"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="My Story" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_menu_share"
+            android:title="Settings" />
+    </group>
+
+</menu>

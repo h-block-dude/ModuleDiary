@@ -1,0 +1,564 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hamzah.modulediary.Statistics.AutumnFragment"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"
+                android:layout_height="wrap_content"
+                android:text="GLOBAL"
+                android:padding="@dimen/activity_horizontal_margin"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"
+                android:layout_height="wrap_content"
+                android:text="LOCAL"
+                android:padding="@dimen/activity_horizontal_margin"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:layout_height="wrap_content"
+                    android:text="Average mood"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvStatsAvgMoodGlobal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"
+                android:layout_height="wrap_content"
+                android:text="NEUTRAL"
+                android:padding="@dimen/activity_horizontal_margin"/>
+
+            <TextView
+                android:id="@+id/tvStatsAvgMoodLocal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"
+                android:layout_height="wrap_content"
+                android:text="POSITIVE"
+                android:padding="@dimen/activity_horizontal_margin"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@android:color/darker_gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/activity_horizontal_margin"
+                android:paddingBottom="@dimen/activity_horizontal_margin"
+                android:textStyle="bold"
+                android:text="MOOD ENTRY" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Positive"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_alignParentTop="true"
+                        android:layout_toStartOf="@+id/flPositiveLocal"
+                        android:layout_marginEnd="25dp" >
+
+                        <ProgressBar
+                            android:id="@+id/progressBarPositiveGlobal"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="60dp"
+                            android:padding="3dp"
+                            android:layout_gravity="center"
+                            android:layout_height="60dp"
+                            android:max="1000"
+                            android:progress="0"
+                            android:progressDrawable="@drawable/circular_positive_progress_bar" />
+
+                        <TextView
+                            android:id="@+id/tvStatsPosMoodGlobal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="35%"
+                            android:layout_gravity="center"
+                            android:padding="@dimen/activity_horizontal_margin"/>
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/flPositiveLocal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="30dp"
+                        android:layout_alignParentRight="true">
+
+                        <ProgressBar
+                            android:id="@+id/progressBarPositiveLocal"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="60dp"
+                            android:padding="3dp"
+                            android:layout_height="60dp"
+                            android:max="1000"
+                            android:progress="0"
+                            android:layout_gravity="center"
+                            android:progressDrawable="@drawable/circular_positive_progress_bar" />
+
+                        <TextView
+                            android:id="@+id/tvStatsPosMoodLocal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="40%"
+                            android:layout_gravity="center"
+                            android:padding="@dimen/activity_horizontal_margin"/>
+
+                    </FrameLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:text="Neutral"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toStartOf="@+id/flNeutralLocal"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginEnd="26dp">
+
+                        <ProgressBar
+                            android:id="@+id/progressBarNeutralGlobal"
+
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="60dp"
+                            android:padding="3dp"
+                            android:layout_height="60dp"
+                            android:max="1000"
+                            android:progress="0"
+                            android:progressDrawable="@drawable/circular_neutral_progress_bar"
+                             />
+
+                        <TextView
+                            android:id="@+id/tvStatsNeutralMoodGlobal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="40%"
+                            android:layout_gravity="center"
+                            android:padding="@dimen/activity_horizontal_margin"/>
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/flNeutralLocal"
+                        android:layout_marginRight="30dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="30dp">
+
+                        <ProgressBar
+                            android:id="@+id/progressBarNeutralLocal"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="60dp"
+                            android:padding="3dp"
+                            android:layout_height="60dp"
+                            android:max="1000"
+                            android:progress="0"
+                            android:progressDrawable="@drawable/circular_neutral_progress_bar" />
+
+                        <TextView
+                            android:id="@+id/tvStatsNeutralMoodLocal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="25%"
+                            android:padding="@dimen/activity_horizontal_margin"/>
+
+                    </FrameLayout>
+
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:text="Negative"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toStartOf="@+id/flNegativeLocal"
+                        android:layout_marginEnd="26dp"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin">
+
+                        <ProgressBar
+                            android:id="@+id/progressBarNegativeGlobal"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="60dp"
+                            android:padding="3dp"
+                            android:layout_height="60dp"
+                            android:max="1000"
+                            android:progress="0"
+                            android:progressDrawable="@drawable/circular_negative_progress_bar" />
+
+                        <TextView
+                            android:id="@+id/tvStatsNegMoodGlobal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="25%"
+                            android:padding="@dimen/activity_horizontal_margin"/>
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/flNegativeLocal"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_alignParentRight="true">
+
+                        <ProgressBar
+                            android:id="@+id/progressBarNegativeLocal"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="60dp"
+                            android:padding="3dp"
+                            android:layout_height="60dp"
+                            android:max="1000"
+                            android:progress="0"
+                            android:progressDrawable="@drawable/circular_negative_progress_bar" />
+
+                        <TextView
+                            android:id="@+id/tvStatsNegMoodLocal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="35%"
+                            android:layout_gravity="center"
+                            android:padding="@dimen/activity_horizontal_margin"/>
+
+                    </FrameLayout>
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@android:color/darker_gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:paddingTop="@dimen/activity_horizontal_margin"
+                android:paddingBottom="@dimen/activity_horizontal_margin"
+                android:text="MODULE RANKING" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:text="Best"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvStatsBestModuleGlobal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="G53ADS"
+                android:textColor="@android:color/black"
+                android:padding="@dimen/activity_horizontal_margin"/>
+
+            <TextView
+                android:id="@+id/tvStatsBestModuleLocal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="G53MDP"
+                android:textColor="@android:color/black"
+                android:padding="@dimen/activity_horizontal_margin"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:text="Worst"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvStatsWorstModuleGlobal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="G53SQM"
+                android:textColor="@android:color/black"
+                android:padding="@dimen/activity_horizontal_margin"/>
+
+            <TextView
+                android:id="@+id/tvStatsWorstModuleLocal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="G53SQM"
+                android:padding="@dimen/activity_horizontal_margin"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@android:color/darker_gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:text="Best day"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvStatsBestDayGlobal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="Mon"
+                android:padding="@dimen/activity_horizontal_margin"/>
+
+            <TextView
+                android:id="@+id/tvStatsBestDayLocal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="Thu"
+                android:padding="@dimen/activity_horizontal_margin"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@android:color/darker_gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:layout_height="wrap_content"
+                    android:text="Worst day"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvStatsWorstDayGlobal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="Wed"
+                android:padding="@dimen/activity_horizontal_margin"/>
+
+            <TextView
+                android:id="@+id/tvStatsWorstDayLocal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="Wed"
+                android:padding="@dimen/activity_horizontal_margin"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</ScrollView>

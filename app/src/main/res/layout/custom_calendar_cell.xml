@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/custom_cell"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/cell_bg"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@+id/ivCalendarDeadlineIndicator"
+            android:layout_width="35dp"
+            android:layout_gravity="center"
+            android:layout_height="35dp"
+            android:src="@drawable/circle_deadlines_bg"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:paddingTop="5dp"
+            android:layout_gravity="center"
+            android:paddingBottom="5dp"
+            android:id="@+id/tv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </FrameLayout>
+
+    <View
+        android:layout_marginTop="5dp"
+        android:id="@+id/viewCalendarMoodLine"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/caldroid_light_red"
+        android:visibility="invisible"/>
+
+</LinearLayout>

@@ -1,0 +1,20 @@
+<android.support.v7.preference.PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.v7.preference.EditTextPreference
+        android:key="pref_semester"
+        android:title="Semester"
+        android:defaultValue="1"
+        android:dialogTitle="Select semester"
+        android:dialogLayout="@layout/pref_dialog_edittext_fix"
+        android:summary="Select here to change your current semester" />
+
+    <android.support.v7.preference.EditTextPreference
+        android:key="pref_year_of_study"
+        android:title="Year of study"
+        android:defaultValue="1"
+        android:dialogTitle="Select year of study"
+        android:dialogLayout="@layout/pref_dialog_edittext_fix"
+        android:summary="Select here to change your current year of study" />
+
+</android.support.v7.preference.PreferenceScreen>

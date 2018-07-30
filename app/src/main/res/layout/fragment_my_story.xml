@@ -1,0 +1,130 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.hamzah.modulediary.MyStory.MyStoryFragment"
+    android:clipToPadding="false">
+
+
+    <ListView
+        android:id="@+id/lvStories"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/tvStoryNoStory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No stories available"
+        android:layout_gravity="center"/>
+
+    <RelativeLayout
+        android:id="@+id/rlBottomSheetStory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/off_white"
+        android:elevation="10dp"
+        android:padding="@dimen/activity_horizontal_margin"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="220dp"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <!--<TextView-->
+        <!--android:id="@+id/tvDateTitleBottomSheetStory"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignEnd="@+id/tvCommentTitleBottomSheetStory"-->
+        <!--android:textColor="@android:color/black"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:paddingBottom="10dp"-->
+        <!--android:paddingLeft="@dimen/activity_horizontal_margin"-->
+        <!--android:paddingTop="10dp"-->
+        <!--android:text="Date:" />-->
+
+        <TextView
+            android:id="@+id/tvStoryBottomSheetDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:textColor="@color/positiveMoodToolbar"
+            android:text="17-11-2017"
+            android:textSize="20sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/tvStoryBottomSheetDate"
+            android:background="@color/positiveMoodToolbar" />
+
+        <!--<TextView-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:id="@+id/tvMoodBottomSheetStory"-->
+        <!--android:padding="@dimen/activity_horizontal_margin"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="POS"-->
+        <!--android:textStyle="bold"-->
+        <!--android:textSize="70sp"-->
+        <!--android:textColor="@color/positiveMoodToolbar"/>-->
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/tvBottomSheetCalendar">-->
+
+        <TextView
+            android:id="@+id/tvTagsTitleBottomSheetStory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/tvCommentTitleBottomSheetStory"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tvStoryBottomSheetDate"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="10dp"
+            android:text="Tags:"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/tvTagsBottomSheetStory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvStoryBottomSheetDate"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@+id/tvTagsTitleBottomSheetStory"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="G53MDP, G53PEC"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tvCommentTitleBottomSheetStory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTagsBottomSheetStory"
+            android:paddingBottom="10dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="10dp"
+            android:text="Comments:"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tvCommentBottomSheetStory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tvTagsTitleBottomSheetStory"
+            android:layout_toRightOf="@+id/tvCommentTitleBottomSheetStory"
+            android:padding="10dp"
+            android:text="Comments:"
+            android:textColor="@android:color/black" />
+
+        <!--</LinearLayout>-->
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

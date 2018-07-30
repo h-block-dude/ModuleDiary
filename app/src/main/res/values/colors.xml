@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2196f3</color>
+    <color name="colorPrimaryDark">#1281d9</color>
+    <!--<color name="colorPrimary">#3F51B5</color>-->
+    <!--<color name="colorPrimaryDark">#303F9F</color>-->
+    <!--<color name="colorAccent">#FF4081</color>-->
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="positiveMoodStatusBar">#00695c</color>
+    <color name="positiveMoodToolbar">#009688</color>
+
+    <color name="neutralMoodStatusBar">#1565c0</color>
+    <color name="neutralMoodToolbar">#2196f3</color>
+
+    <color name="negativeMoodStatusBar">#c62828</color>
+    <color name="negativeMoodToolbar">#f44336</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="off_white">#f7f7f7</color>
+</resources>
